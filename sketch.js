@@ -26,7 +26,7 @@ function preload() {
 }
 
 function setup() {
-    let cnv = createCanvas(400, 600);
+    let cnv = createCanvas(windowWidth, windowHeight); // Create canvas based on window size
     cnv.id('gameCanvas');  // Assign an id to the canvas
     bird = new Bird();
     obstacles.push(new Obstacle());
@@ -34,7 +34,6 @@ function setup() {
     buttonHeight = 50;
     buttonX = width / 2 - buttonWidth / 2;
     buttonY = height / 2 - buttonHeight / 2;
-}
 
 function draw() {
     // Draw the background image
