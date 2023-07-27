@@ -66,14 +66,14 @@ function draw() {
         fill(255);
         textSize(20);
         textAlign(CENTER, CENTER);
-        text("கண்ணா,நீ அவுட்டு கண்ணா..", width / 2, height / 4);
+        text("சோலி முடிஞ்சுது..", width / 2, height / 4);
 
         // Draw the restart button
         fill(200);
         rect(buttonX, buttonY, buttonWidth, buttonHeight);
         fill(0);
         textSize(12);
-        text("மறுபடி விளையாடு கண்ணா.", width / 2, height / 2)
+        text("மறுபடி ஆரம்பிக்கலாமா.", width / 2, height / 2)
  
     }
     fill(255);
@@ -81,8 +81,8 @@ function draw() {
     textAlign(CENTER, CENTER);  // Center align text
     text("Score: " + score, width / 2, 50);  // Position at center of screen
 
-    textSize(20); // Make the following texts smaller
-    text("@senthazalravi", width / 2, 75); // Place the text below the score
+    textSize(15); // Make the following texts smaller
+    text("Rajkumar", width / 2, 75); // Place the text below the score
     text("#pepperprogramming", width / 2, 100); // Place the text below "@senthazalravi"
 
     image(baseImg, 0, height - baseImg.height * 0.75, width, baseImg.height * 0.75);
