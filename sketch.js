@@ -34,6 +34,7 @@ function setup() {
     buttonHeight = 50;
     buttonX = width / 2 - buttonWidth / 2;
     buttonY = height / 2 - buttonHeight / 2;
+    cnv.touchStarted(handleTouch);
 }
 
 function draw() {
@@ -93,6 +94,17 @@ function draw() {
 function keyPressed() {
     if (key == ' ') {
         bird.up();
+    }
+}
+function handleTouch() {
+    // Handle touch event on mobile
+    if (!gameOver) {
+        bird.up();
+    } else {
+        // Check if the touch is within the bounds of the restart button
+        if (mouseX > buttonX && mouseX < buttonX + buttonWidth && mouseY > buttonY && mouseY < buttonY + buttonHeight) {
+            restartGame();
+        }
     }
 }
 
